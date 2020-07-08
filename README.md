@@ -1,6 +1,6 @@
 # FlexionCodeReview
 
-#### Prioritized list of five or more development tasks you would do next to improve your solution to the code challenge.
+#### Prioritized list of development tasks I would like to do next to improve my solution to the code challenge
 
 1. Improve usability of the UI to allow for students and teach to provide comments to each other
 2. Improve performance of web form validation and back-end evaluation of answers submitted.
