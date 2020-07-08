@@ -1,4 +1,4 @@
-# FlexionCodeReview
+# Flexion Coding Challenge
 
 #### Prioritized list of development tasks I would like to do next to improve my solution to the code challenge
 
