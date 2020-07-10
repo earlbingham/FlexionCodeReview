@@ -2,11 +2,30 @@
 
 #### Installation Steps
 
+```sh
+# Install NodeJS and NPM
+This website has links to download and install on various operating systems
+https://www.npmjs.com/get-npm
+
+# Install NodeJS Packages This Project Depends On
 npm install
+
+```
 
 #### Steps on Running The Application
 
+```sh
+# Run this command from within the FlexionCodeReview directory
 node index.js
+
+# This will start up the NodeJS server, then you can go to the following URL on your system to see the web
+# form that teachers can use to submit Students Unit Conversion responses
+http://localhost:3000
+
+# Otherwise, if a teacher wants to use the application on the command line, they can use the scripts provided
+# in the FlexionCodeReview/tests directory
+
+```
 
 #### Prioritized list of development tasks I would like to do next to improve my solution to the code challenge
 
