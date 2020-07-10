@@ -1,0 +1,77 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+<form action="/api/students" method="POST" class="mb-4">
+  <div class="form-group">
+    <label for="input_value">Student Input Numerical Value</label>
+    <input type="number" name="input_value" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="input_unit">Student Unit of Measure</label>
+    <!-- input type="email" name="input_unit" class="form-control" -->
+    <select id="input_unit" name="input_unit">
+      <option value="Kelvin">Kelvin</option>
+      <option value="Celsius">Celsius</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Rankine">Rankine</option>
+      <option value="liters">liters</option>
+      <option value="tablespoons">tablespoons</option>
+      <option value="cubic-inches">cubic-inches</option>
+      <option value="cups">cups</option>
+      <option value="cubic-feet">cubic-feet</option>
+      <option value="gallons">gallons</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="target_unit">Target Unit of Measure</label>
+    <select id="input_unit" name="input_unit">
+      <option value="Kelvin">Kelvin</option>
+      <option value="Celsius">Celsius</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Rankine">Rankine</option>
+      <option value="liters">liters</option>
+      <option value="tablespoons">tablespoons</option>
+      <option value="cubic-inches">cubic-inches</option>
+      <option value="cups">cups</option>
+      <option value="cubic-feet">cubic-feet</option>
+      <option value="gallons">gallons</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="input_value">Student Response</label>
+    <input type="number" name="response" class="form-control">
+  </div>
+   <div class="form-group">
+    <label for="input_value">Authorative Answer</label>
+    <input type="text" name="auth_answer" class="form-control">
+  </div>
+   <div class="form-group">
+    <label for="target_unit">Output</label>
+    <select id="input_unit" name="input_unit">
+      <option value="correct">correct</option>
+      <option value="incorrect">incorrect</option>
+      <option value="invalid">invalid</option>
+    </select>
+  </div>
+  <input type="submit" value="Add Student Response" class="btn btn-primary btn-block">
+</form>
+<h4>Student Responses</h4>
+<table id="students">
+   <tr>
+    <th>Input Numerical Value</th>
+    <th>Input Unit of Measure</th>
+    <th>Target Unit of Measure</th>
+    <th>Student Response</th>
+    <th>Authorative Answer</th>
+    <th>Output</th>
+  </tr>
+  {{#each students}}
+  <tr><td>{{this.input_value}}</td>
+  <td>{{this.input_unit}}</td>
+  <td>{{this.target_unit}}</td>
+  <td>{{this.response}}</td>
+  <td>{{this.auth_answer}}</td>
+  <td>{{this.output}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+<a href="/api/students" class="btn btn-light mt-4">Visit API</a>

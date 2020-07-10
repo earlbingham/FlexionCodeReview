@@ -1,0 +1,8 @@
+{
+    "input_value": 333.45, 
+    "input_unit": "Fahrenheit", 
+    "target_unit": "Rankine", 
+    "response": 444.67, 
+    "auth_answer": 444.67, 
+    "output": "correct" 
+}
