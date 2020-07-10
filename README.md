@@ -7,3 +7,9 @@
 3. Add more security to the application to ensure students cannot login as teachers, etc.
 4. Containerize the application to allow for docker installation
 5. Store student and teacher data in a nosql db
+
+#### Installation Steps
+
+npm install
+
+node index.js
