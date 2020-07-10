@@ -1,0 +1,7 @@
+{
+    "input_value": 6.5
+    "input_unit": "Fahrenheit", 
+    "target_unit": "Rankine", 
+    "response": "dog",
+    "auth_answer": 22.34
+}
