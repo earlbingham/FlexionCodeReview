@@ -19,20 +19,20 @@ router.get('/:id', (req, res) => {
   }
 });
 
-// Create Student
-router.post('/', (req, res) => {
+// Create Student Response
+router.post('/', (request, response) => {
   const newStudent = {
-    ...req.body,
+    ...request.body,
     id: uuid.v4()
   };
 
   if (!newStudent.input_value || !newStudent.input_unit) {
-    return res.status(400).json({ msg: 'Please include a input value and unit' });
+    return response.status(400).json({ msg: 'Please include a input value and unit' });
   }
 
   students.push(newStudent);
-  res.json(students);
-  // res.redirect('/');
+  // response.json(students);
+  response.redirect('/');
 });
 
 // Update Student

@@ -14,12 +14,12 @@ app.use(express.urlencoded({ extended: false }));
 // Main Route
 app.get('/', (req, res) =>
   res.render('index', {
-    title: 'Unit Conversion Science Unit App',
+    title: 'Unit Conversion Science Application',
     students
   })
 );
 
-// Set static folder
+// Folder for CSS
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Students API Routes

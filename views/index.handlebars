@@ -1,12 +1,11 @@
 <h1 class="text-center mb-3">{{title}}</h1>
 <form action="/api/students" method="POST" class="mb-4">
   <div class="form-group">
-    <label for="input_value">Student Input Numerical Value</label>
-    <input type="number" name="input_value" class="form-control">
+    <label for="input_value">Input Numerical Value</label>
+    <input type="number" name="input_value" class="form-control" step=".01">
   </div>
   <div class="form-group">
-    <label for="input_unit">Student Unit of Measure</label>
-    <!-- input type="email" name="input_unit" class="form-control" -->
+    <label for="input_unit">Unit of Measure</label>
     <select id="input_unit" name="input_unit">
       <option value="Kelvin">Kelvin</option>
       <option value="Celsius">Celsius</option>
@@ -22,7 +21,7 @@
   </div>
   <div class="form-group">
     <label for="target_unit">Target Unit of Measure</label>
-    <select id="input_unit" name="input_unit">
+    <select id="target_unit" name="target_unit">
       <option value="Kelvin">Kelvin</option>
       <option value="Celsius">Celsius</option>
       <option value="Fahrenheit">Fahrenheit</option>
@@ -36,16 +35,16 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="input_value">Student Response</label>
-    <input type="number" name="response" class="form-control">
+    <label for="response">Student Response</label>
+    <input type="number" name="response" class="form-control" step=".01">
   </div>
    <div class="form-group">
-    <label for="input_value">Authorative Answer</label>
-    <input type="text" name="auth_answer" class="form-control">
+    <label for="auth_answer">Authorative Answer</label>
+    <input type="text" name="auth_answer" class="form-control" step=".01">
   </div>
    <div class="form-group">
-    <label for="target_unit">Output</label>
-    <select id="input_unit" name="input_unit">
+    <label for="output">Output</label>
+    <select id="output" name="output">
       <option value="correct">correct</option>
       <option value="incorrect">incorrect</option>
       <option value="invalid">invalid</option>
