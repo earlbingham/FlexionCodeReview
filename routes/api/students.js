@@ -27,7 +27,7 @@ router.post('/', (request, response) => {
   };
 
   // Validate student response and update output
-  validateStudenResponse(newStudent);
+  validateStudentResponse(newStudent);
 
   students.push(newStudent);
   // response.json(students);
@@ -42,38 +42,33 @@ router.post('/cli', (request, response) => {
   };
 
   // Validate student response and update output
-  validateStudenResponse(newStudent);
+  validateStudentResponse(newStudent);
 
   students.push(newStudent);
   response.json(newStudent);
 });
 
-function validateStudenResponse(newStudent) {
+function validateStudentResponse(newStudent) {
   if (!newStudent.input_value || !newStudent.input_unit || !newStudent.target_unit 
     || !newStudent.response || !newStudent.auth_answer) {
     return response.status(400).json({ msg: 'Please include a input value, unit of measure, target unit of measure, Student Response, and Authorative Answer' });
   }
-  var student_response = parseFloat(newStudent.response);
-  var authorative = parseFloat(newStudent.auth_answer);
+
+  // To be considered correct, the student’s response must match an authoritative 
+  // answer after both the student’s response and authoritative answer are rounded 
+  // to the tenths place. For example, rounding 0.843 to the nearest tenth would give 0.8.
+  student_response = roundTo(parseFloat(newStudent.response), 1);
+  authoritative_answer = roundTo(parseFloat(newStudent.auth_answer), 1);
+
   // Validate input unit of measure
   if(!checkUnitOfMeasure(newStudent.input_unit)) {
     newStudent.output = 'invalid';
-  } else if(student_response != authorative) {
-    // To be considered correct, the student’s response must match an authoritative 
-    // answer after both the student’s response and authoritative answer are rounded 
-    // to the tenths place.
-    newStudent.response = roundTo(parseFloat(newStudent.response), 2);
-    newStudent.auth_answer = roundTo(parseFloat(newStudent.auth_answer), 2);
-    if(newStudent.response != newStudent.auth_answer) {
-      newStudent.output = 'incorrect';
-    } else {
-      newStudent.output = 'correct';
-    }
+  } else if(student_response != authoritative_answer) {
+    newStudent.output = 'incorrect';
   } else {
     newStudent.output = 'correct';
   }
 }
-
 
 function roundTo(n, digits) {
   if (digits === undefined) {
@@ -81,7 +76,7 @@ function roundTo(n, digits) {
   }
   var multiplicator = Math.pow(10, digits);
   n = parseFloat((n * multiplicator).toFixed(11));
-  return (Math.round(n) / multiplicator).toFixed(2);
+  return (Math.round(n) / multiplicator).toFixed(1);
 }
 
 
