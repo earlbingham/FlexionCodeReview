@@ -1,4 +1,25 @@
 <h1 class="text-center mb-3">{{title}}</h1>
+<h4>Student Responses</h4>
+<table id="students">
+   <tr>
+    <th>Input Numerical Value</th>
+    <th>Input Unit of Measure</th>
+    <th>Target Unit of Measure</th>
+    <th>Student Response</th>
+    <th>Authorative Answer</th>
+    <th>Output</th>
+  </tr>
+  {{#each students}}
+  <tr><td>{{this.input_value}}</td>
+  <td>{{this.input_unit}}</td>
+  <td>{{this.target_unit}}</td>
+  <td>{{this.response}}</td>
+  <td>{{this.auth_answer}}</td>
+  <td>{{this.output}}</td>
+  </tr>
+  {{/each}}
+</table>
+<br/>
 <form action="/api/students" method="POST" class="mb-4">
   <div class="form-group">
     <label for="input_value">Input Numerical Value</label>
@@ -52,25 +73,3 @@
   </div -->
   <input type="submit" value="Add Student Response" class="btn btn-primary btn-block">
 </form>
-<h4>Student Responses</h4>
-<table id="students">
-   <tr>
-    <th>Input Numerical Value</th>
-    <th>Input Unit of Measure</th>
-    <th>Target Unit of Measure</th>
-    <th>Student Response</th>
-    <th>Authorative Answer</th>
-    <th>Output</th>
-  </tr>
-  {{#each students}}
-  <tr><td>{{this.input_value}}</td>
-  <td>{{this.input_unit}}</td>
-  <td>{{this.target_unit}}</td>
-  <td>{{this.response}}</td>
-  <td>{{this.auth_answer}}</td>
-  <td>{{this.output}}</td>
-  </tr>
-  {{/each}}
-</table>
-
-<a href="/api/students" class="btn btn-light mt-4">Visit API</a>
