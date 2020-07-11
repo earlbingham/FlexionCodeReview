@@ -1,7 +1,7 @@
 {
-    "input_value": 136.1, 
+    "input_value": "136.1", 
     "input_unit": "dog", 
     "target_unit": "Celsius", 
-    "response": 45.32, 
-    "auth_answer": 45.32
+    "response": "45.32", 
+    "auth_answer": "45.32"
 }

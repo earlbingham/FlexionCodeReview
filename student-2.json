@@ -1,0 +1,20 @@
+[
+  {
+    "input_value": "432",
+    "input_unit": "Kelvin",
+    "target_unit": "Kelvin",
+    "response": "22",
+    "auth_answer": "33",
+    "id": "54eb3393-147a-4da8-879d-339e0496147a",
+    "output": "incorrect"
+  },
+  {
+    "input_value": "123",
+    "input_unit": "Kelvin",
+    "target_unit": "Kelvin",
+    "response": "123",
+    "auth_answer": "123",
+    "id": "ce78db97-f129-4370-acb4-70079925b342",
+    "output": "correct"
+  }
+]

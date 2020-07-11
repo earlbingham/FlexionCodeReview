@@ -1,6 +1,6 @@
-{ "input_value": 111.23, 
+{ "input_value": "111.23", 
     "input_unit": "Fahrenheit", 
     "target_unit": "Rankine", 
-    "response": 222.34, 
-    "auth_answer": 222.34
+    "response": "222.34", 
+    "auth_answer": "222.34"
 }

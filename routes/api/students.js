@@ -2,6 +2,7 @@ const express = require('express');
 const uuid = require('uuid');
 const router = express.Router();
 const students = require('../../Students');
+const fs = require('fs');
 
 const idFilter = req => student => student.id === parseInt(req.params.id);
 
@@ -30,7 +31,8 @@ router.post('/', (request, response) => {
   validateStudentResponse(newStudent);
 
   students.push(newStudent);
-  // response.json(students);
+  let data = JSON.stringify(students, null, 2);
+  fs.writeFileSync('student-2.json', data);
   response.redirect('/');
 });
 
@@ -44,7 +46,9 @@ router.post('/cli', (request, response) => {
   // Validate student response and update output
   validateStudentResponse(newStudent);
 
-  students.push(newStudent);
+  // students.push(newStudent);
+  let data = JSON.stringify(students, null, 2);
+  fs.writeFileSync('student-2.json', data);
   response.json(newStudent);
 });
 
