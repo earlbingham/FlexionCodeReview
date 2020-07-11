@@ -24,6 +24,13 @@ http://localhost:3000
 
 # Otherwise, if a teacher wants to use the application on the command line, they can use the scripts provided
 # in the FlexionCodeReview/tests directory
+tests/addStudentResponseCorrect - will generate a new student response that will have correct output value
+
+tests/addStudentResponseIncorrect - will generate a new student response that will have incorrect output value
+
+tests/addStudentResponseInvalid - will generate a new student response that will have incorrect output value
+
+tests/getStudentResponses - will get all the current student responses stored in the application
 
 ```
 
