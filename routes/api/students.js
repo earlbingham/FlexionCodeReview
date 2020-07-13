@@ -56,7 +56,7 @@ router.post('/cli', (request, response) => {
   // Validate student response and update output
   validateStudentResponse(newStudent);
 
-  // students.push(newStudent);
+  students.push(newStudent);
   let data = JSON.stringify(students, null, 2);
   fs.writeFileSync('student-2.json', data);
   response.json(newStudent);

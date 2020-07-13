@@ -1,38 +1,29 @@
 [
   {
-    "input_value": "432",
-    "input_unit": "Kelvin",
-    "target_unit": "Kelvin",
-    "response": "22",
-    "auth_answer": "33",
+    "input_value": "84.2",
+    "input_unit": "Fahrenheit",
+    "target_unit": "Rankine",
+    "response": "543.94",
+    "auth_answer": "543.94", 
     "id": "54eb3393-147a-4da8-879d-339e0496147a",
-    "output": "incorrect"
-  },
-  {
-    "input_value": "123",
-    "input_unit": "Kelvin",
-    "target_unit": "Kelvin",
-    "response": "123",
-    "auth_answer": "123",
-    "id": "ce78db97-f129-4370-acb4-70079925b342",
     "output": "correct"
   },
   {
-    "input_value": "123",
-    "input_unit": "gallons",
-    "target_unit": "cubic-feet",
-    "response": "123.12",
-    "auth_answer": "123.13",
+    "input_value": "317.33",
+    "input_unit": "Kelvin",
+    "target_unit": "Fahrenheit",
+    "response": "111.554",
+    "auth_answer": "111.7",
+    "id": "ce78db97-f129-4370-acb4-70079925b342",
+    "output": "incorrect"
+  },
+  {
+    "input_value": "25.6",
+    "input_unit": "cups",
+    "target_unit": "liters",
+    "response": "6.1",
+    "auth_answer": "6.1",
     "id": "a765f7a6-cd7c-4b8e-b691-c3191362d662",
     "output": "correct"
-  },
-  {
-    "input_value": "456",
-    "input_unit": "Kelvin",
-    "target_unit": "Kelvin",
-    "response": "465.3",
-    "auth_answer": "465.4",
-    "id": "89fa5cd0-b8ba-456b-b698-17d552c98f1c",
-    "output": "incorrect"
   }
 ]

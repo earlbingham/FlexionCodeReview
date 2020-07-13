@@ -11,15 +11,19 @@
   </tr>
   {{#each students}}
   <tr><td>{{this.input_value}}</td>
-  <td>{{this.input_unit}}</td>
-  <td>{{this.target_unit}}</td>
-  <td>{{this.response}}</td>
-  <td>{{this.auth_answer}}</td>
-  {{#ifCond this.output 'incorrect'}}
-  <td style="color:red">{{this.output}}</td>
+  {{#ifCond this.output 'invalid'}}
+  <td style="color:red">{{this.input_unit}}</td>
   {{else}}
-  <td>{{this.output}}</td>
+  <td>{{this.input_unit}}</td>
   {{/ifCond}}
+  <td>{{this.target_unit}}</td>
+  {{#ifCond this.output 'incorrect'}}
+  <td style="color:red">{{this.response}}</td>
+  {{else}}
+  <td>{{this.response}}</td>
+  {{/ifCond}}
+  <td>{{this.auth_answer}}</td>
+  <td>{{this.output}}</td>
   </tr>
   {{/each}}
 </table>
