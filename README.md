@@ -3,12 +3,18 @@
 #### Installation Steps
 
 ```sh
-# Install NodeJS and NPM
+# Install NodeJS, NPM and Curl
+
 This website has links to download and install on various operating systems
 https://www.npmjs.com/get-npm
 
 # Install NodeJS Packages This Project Depends On
+
 npm install
+
+# Install curl command line tool to be used for REST API test scripts
+
+http://curl.haxx.se/download.html
 
 ```
 
@@ -44,3 +50,5 @@ tests/getStudentResponses - Provide a list of current student responses stored i
 4. Improve performance of web form validation and back-end evaluation of answers submitted.
 5. Break up the REST API server and the front end website so they can be conainerized and deployed as seperate services.
 6. Store student and teacher data in a database to support large amount of student responses.
+
+
