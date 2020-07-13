@@ -1,6 +1,6 @@
-{ "input_value": "73.23", 
+{ "input_value": "32", 
     "input_unit": "Fahrenheit", 
-    "target_unit": "Celsius", 
-    "response": "22.9",
+    "target_unit": "Kelvin", 
+    "response": "273.15",
     "auth_answer": ""
 }

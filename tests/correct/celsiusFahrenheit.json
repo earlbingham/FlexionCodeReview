@@ -1,6 +1,6 @@
-{ "input_value": "73.23", 
+{ "input_value": "22.9", 
     "input_unit": "Celsius", 
     "target_unit": "Fahrenheit", 
-    "response": "22.9",
+    "response": "73.22",
     "auth_answer": ""
 }

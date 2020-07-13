@@ -1,6 +1,6 @@
-{ "input_value": "73.23", 
-    "input_unit": "Fahrenheit", 
-    "target_unit": "Celsius", 
-    "response": "22.9",
+{ "input_value": "10", 
+    "input_unit": "Kelvin", 
+    "target_unit": "Rankine", 
+    "response": "18",
     "auth_answer": ""
 }
