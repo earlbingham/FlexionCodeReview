@@ -38,9 +38,11 @@ http://localhost:3000
 
 tests/addStudentResponseCorrect - Createa a new student response that will have correct output value
 
-tests/addStudentResponseIncorrect - Create a new student response that will have incorrect output value
+tests/correct/ - Test scripts to test a student response that will have correct output value
 
-tests/addStudentResponseInvalid - Create a new student response that will have incorrect output value
+tests/incorrect/ - Test scripts to test a student response that will have incorrect output value
+
+tests/invalid/ - Test scripts to test a student response that will have invalid output value
 
 tests/getStudentResponses - Provide a list of current student responses stored in the application
 
