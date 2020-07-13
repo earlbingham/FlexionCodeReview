@@ -53,8 +53,9 @@ tests/runStress - Simulates 20 new virtual users interacting with REST APIs ever
 1. Get the AWS CodePipline I have setup with this GitHub repo working. I've started the setup, but currently have an issue I need to debug to get it fully working.
 2. Add login page to ensure only teachers have access to the application.
 3. Improve usability of the UI to allow for student responses to be grouped by student, and grouped by teachers.
-4. Improve performance of web form validation and back-end evaluation of answers submitted.
-5. Break up the REST API server and the front end website so they can be conainerized and deployed as seperate services.
-6. Store student and teacher data in a database to support large amount of student responses.
+4. Break up the REST API server and the front end website so they can be conainerized and deployed as seperate services.
+5. Store student and teacher data in a database to support large amount of student responses.
+6. Add automated regression test framework for CI/CD Pipeline
+7. Add more stress tests for insertion and deletion of student responses
 
 
