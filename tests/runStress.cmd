@@ -1,0 +1,2 @@
+artillery run stressTest.yml
+

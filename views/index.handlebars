@@ -15,7 +15,11 @@
   <td>{{this.target_unit}}</td>
   <td>{{this.response}}</td>
   <td>{{this.auth_answer}}</td>
+  {{#ifCond this.output 'incorrect'}}
+  <td style="color:red">{{this.output}}</td>
+  {{else}}
   <td>{{this.output}}</td>
+  {{/ifCond}}
   </tr>
   {{/each}}
 </table>

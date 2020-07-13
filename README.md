@@ -16,6 +16,10 @@ npm install
 
 http://curl.haxx.se/download.html
 
+# Install JS stress test tool artillery that simulates number of users
+
+npm install -g artillery
+
 ```
 
 #### Steps on Running The Application
@@ -39,6 +43,8 @@ tests/addStudentResponseIncorrect - Create a new student response that will have
 tests/addStudentResponseInvalid - Create a new student response that will have incorrect output value
 
 tests/getStudentResponses - Provide a list of current student responses stored in the application
+
+tests/runStress - Simulates 20 new virtual users interacting with REST APIs every 60 seconds
 
 ```
 

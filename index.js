@@ -15,7 +15,15 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) =>
   res.render('index', {
     title: 'Unit Conversion Science Application',
-    students
+    students,
+    helpers: {
+      ifCond : function(v1, v2, options) {
+        if(v1 === v2) {
+          return options.fn(this);
+        }
+        return options.inverse(this);
+      }
+    }
   })
 );
 
