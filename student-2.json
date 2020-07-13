@@ -16,5 +16,23 @@
     "auth_answer": "123",
     "id": "ce78db97-f129-4370-acb4-70079925b342",
     "output": "correct"
+  },
+  {
+    "input_value": "123",
+    "input_unit": "gallons",
+    "target_unit": "cubic-feet",
+    "response": "123.12",
+    "auth_answer": "123.13",
+    "id": "a765f7a6-cd7c-4b8e-b691-c3191362d662",
+    "output": "correct"
+  },
+  {
+    "input_value": "456",
+    "input_unit": "Kelvin",
+    "target_unit": "Kelvin",
+    "response": "465.3",
+    "auth_answer": "465.4",
+    "id": "89fa5cd0-b8ba-456b-b698-17d552c98f1c",
+    "output": "incorrect"
   }
 ]

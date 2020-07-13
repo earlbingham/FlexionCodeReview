@@ -8,7 +8,7 @@ fs.readFile('student-2.json', (err, data) => {
    function addToConstant (student) {
      students.push(student);
    }
-   console.log(students);
+   // console.log(students);
 });
 
 module.exports = students;

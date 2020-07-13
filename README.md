@@ -20,17 +20,19 @@ node index.js
 
 # This will start up the NodeJS server, then you can go to the following URL on your system to see the web
 # form that teachers can use to submit Students Unit Conversion responses
+
 http://localhost:3000
 
 # Otherwise, if a teacher wants to use the application on the command line, they can use the scripts provided
 # in the FlexionCodeReview/tests directory
-tests/addStudentResponseCorrect - will generate a new student response that will have correct output value
 
-tests/addStudentResponseIncorrect - will generate a new student response that will have incorrect output value
+tests/addStudentResponseCorrect - Createa a new student response that will have correct output value
 
-tests/addStudentResponseInvalid - will generate a new student response that will have incorrect output value
+tests/addStudentResponseIncorrect - Create a new student response that will have incorrect output value
 
-tests/getStudentResponses - will get all the current student responses stored in the application
+tests/addStudentResponseInvalid - Create a new student response that will have incorrect output value
+
+tests/getStudentResponses - Provide a list of current student responses stored in the application
 
 ```
 
