@@ -1,6 +1,6 @@
 { "input_value": "32", 
     "input_unit": "cubic-feet", 
     "target_unit": "cubic-inches", 
-    "response": "0",
+    "response": "55296.0",
     "auth_answer": ""
 }
