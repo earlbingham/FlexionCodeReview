@@ -1,6 +1,6 @@
 { "input_value": "32", 
     "input_unit": "Fahrenheit", 
-    "target_unit": "Celsius", 
+    "target_unit": "gallons", 
     "response": "0",
     "auth_answer": ""
 }

@@ -1,6 +1,6 @@
 { "input_value": "32", 
-    "input_unit": "Fahrenheit", 
-    "target_unit": "Celsius", 
+    "input_unit": "liters", 
+    "target_unit": "cups", 
     "response": "0",
     "auth_answer": ""
 }
