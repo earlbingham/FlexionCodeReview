@@ -38,7 +38,9 @@ http://localhost:3000
 
 tests/addStudentResponseCorrect - Createa a new student response that will have correct output value
 
-tests/correct/ - Test scripts to test a student response that will have correct output value
+tests/temperatures/ - Test scripts to test a student response that calculate temperature conversions correctly
+
+tests/volumes/ - Test scripts to test a student response that calculate volume conversions correctly
 
 tests/incorrect/ - Test scripts to test a student response that will have incorrect output value
 
