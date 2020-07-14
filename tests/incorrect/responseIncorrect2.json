@@ -2,6 +2,6 @@
     "input_value": "6.5",
     "input_unit": "Fahrenheit", 
     "target_unit": "Rankine", 
-    "response": "22.66",
-    "auth_answer": "22.64"
+    "response": "22.64",
+    "auth_answer": "22.66"
 }

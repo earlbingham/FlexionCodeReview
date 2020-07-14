@@ -28,8 +28,8 @@ router.post('/', (request, response) => {
   };
 
   if (!newStudent.input_value || !newStudent.input_unit || !newStudent.target_unit ||
-    !newStudent.response || !newStudent.auth_answer) {
-    return response.status(400).json({ msg: 'Please include a input value, unit of measure, target unit of measure, Student Response, and Authorative Answer' });
+    !newStudent.response) {
+    return response.status(400).json({ msg: 'Please include a input value, unit of measure, target unit of measure, and Student Response' });
   }
 
   // Validate student response and update output

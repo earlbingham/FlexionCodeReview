@@ -1,0 +1,6 @@
+{ "input_value": "73.12", 
+    "input_unit": "gallons", 
+    "target_unit": "Kelvin", 
+    "response": "19.4",
+    "auth_answer": ""
+}
