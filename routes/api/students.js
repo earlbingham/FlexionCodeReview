@@ -90,91 +90,91 @@ function validateStudentResponse (newStudent) {
 // If teacher has not provided auth_answer, then generate
 function generateAuthAnswer(newStudent) {
   if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = (newStudent.input_value - 32) * 5 / 9;
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) - 32) * 5 / 9;
   } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = ((newStudent.input_value-32)/1.8) + 273.15;
+    newStudent.auth_answer = ((parseFloat(newStudent.input_value)-32)/1.8) + 273.15;
   } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = newStudent.input_value + 459.67;
+    newStudent.auth_answer = parseFloat(newStudent.input_value) + 459.67;
   } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = (newStudent.input_value * 9 / 5) + 32;
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 32;
   } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = newStudent.input_value + 273.15;
+    newStudent.auth_answer = parseFloat(newStudent.input_value) + 273.15;
   } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = (newStudent.input_value * 9 / 5) + 491.67;
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 491.67;
   } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = newStudent.input_value - 273.15;
+    newStudent.auth_answer = parseFloat(newStudent.input_value) - 273.15;
   } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = ((newStudent.input_value - 273.15) * 1.8) + 32;
+    newStudent.auth_answer = ((parseFloat(newStudent.input_value) - 273.15) * 1.8) + 32;
   } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = (newStudent.input_value * 9/5);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9/5);
   } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = (newStudent.input_value - 491.67) * 5/9;
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) - 491.67) * 5/9;
   } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = newStudent.input_value - 459.67;
+    newStudent.auth_answer = parseFloat(newStudent.input_value) - 459.67;
   } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = (newStudent.input_value * 5/9);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 5/9);
   } 
   
   else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'tablespoons') {
-    newStudent.auth_answer = (newStudent.input_value * 67.628);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 67.628);
   } else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'cubic-inches') {
-    newStudent.auth_answer = (newStudent.input_value * 61.024);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 61.024);
   } else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'cups') {
-    newStudent.auth_answer = (newStudent.input_value * 4.227);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 4.227);
   } else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'cubic-feet') {
-    newStudent.auth_answer = (newStudent.input_value / 28.317);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 28.317);
   } else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'gallons') {
-    newStudent.auth_answer = (newStudent.input_value / 3.785);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 3.785);
   } else if(newStudent.input_unit == 'tablespoons' && newStudent.target_unit== 'liters') {
-    newStudent.auth_answer = (newStudent.input_value / 67.628);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 67.628);
   } else if(newStudent.input_unit == 'tablespoons' && newStudent.target_unit== 'cubic-inches') {
-    newStudent.auth_answer = (newStudent.input_value / 1.108);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 1.108);
   } else if(newStudent.input_unit == 'tablespoons' && newStudent.target_unit== 'cups') {
-    newStudent.auth_answer = (newStudent.input_value / 16);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 16);
   } else if(newStudent.input_unit == 'tablespoons' && newStudent.target_unit== 'cubic-feet') {
-    newStudent.auth_answer = (newStudent.input_value / 1915);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 1915);
   } else if(newStudent.input_unit == 'tablespoons' && newStudent.target_unit== 'gallons') {
-    newStudent.auth_answer = (newStudent.input_value / 256);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 256);
   } else if(newStudent.input_unit == 'cubic-inches' && newStudent.target_unit== 'liters') {
-    newStudent.auth_answer = (newStudent.input_value / 61.024);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 61.024);
   } else if(newStudent.input_unit == 'cubic-inches' && newStudent.target_unit== 'tablespoons') {
-    newStudent.auth_answer = (newStudent.input_value * 1.108);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 1.108);
   } else if(newStudent.input_unit == 'cubic-inches' && newStudent.target_unit== 'cups') {
-    newStudent.auth_answer = (newStudent.input_value / 14.438);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 14.438);
   } else if(newStudent.input_unit == 'cubic-inches' && newStudent.target_unit== 'cubic-feet') {
-    newStudent.auth_answer = (newStudent.input_value / 1728);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 1728);
   } else if(newStudent.input_unit == 'cubic-inches' && newStudent.target_unit== 'gallons') {
-    newStudent.auth_answer = (newStudent.input_value / 231);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 231);
   } else if(newStudent.input_unit == 'cups' && newStudent.target_unit== 'liters') {
-    newStudent.auth_answer = (newStudent.input_value / 4.227);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 4.227);
   } else if(newStudent.input_unit == 'cups' && newStudent.target_unit== 'tablespoons') {
-    newStudent.auth_answer = (newStudent.input_value * 16);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 16);
   } else if(newStudent.input_unit == 'cups' && newStudent.target_unit== 'cubic-inches') {
-    newStudent.auth_answer = (newStudent.input_value * 14.438);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 14.438);
   } else if(newStudent.input_unit == 'cups' && newStudent.target_unit== 'cubic-feet') {
-    newStudent.auth_answer = (newStudent.input_value / 120);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 120);
   } else if(newStudent.input_unit == 'cups' && newStudent.target_unit== 'gallons') {
-    newStudent.auth_answer = (newStudent.input_value / 16);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 16);
   } else if(newStudent.input_unit == 'cubic-feet' && newStudent.target_unit== 'liters') {
-    newStudent.auth_answer = (newStudent.input_value * 28.317);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 28.317);
   } else if(newStudent.input_unit == 'cubic-feet' && newStudent.target_unit== 'tablespoons') {
-    newStudent.auth_answer = (newStudent.input_value * 1915);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 1915);
   } else if(newStudent.input_unit == 'cubic-feet' && newStudent.target_unit== 'cups') {
-    newStudent.auth_answer = (newStudent.input_value * 120);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 120);
   } else if(newStudent.input_unit == 'cubic-feet' && newStudent.target_unit== 'cubic-inches') {
-    newStudent.auth_answer = (newStudent.input_value * 1728);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 1728);
   } else if(newStudent.input_unit == 'cubic-feet' && newStudent.target_unit== 'gallons') {
-    newStudent.auth_answer = (newStudent.input_value * 7.481);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 7.481);
   } else if(newStudent.input_unit == 'gallons' && newStudent.target_unit== 'liters') {
-    newStudent.auth_answer = (newStudent.input_value * 3.785);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 3.785);
   } else if(newStudent.input_unit == 'gallons' && newStudent.target_unit== 'tablespoons') {
-    newStudent.auth_answer = (newStudent.input_value * 256);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 256);
   } else if(newStudent.input_unit == 'gallons' && newStudent.target_unit== 'cubic-inches') {
     newStudent.auth_answer = (newStudent.input_value * 231);
   } else if(newStudent.input_unit == 'gallons' && newStudent.target_unit== 'cups') {
     newStudent.auth_answer = (newStudent.input_value * 16);
   } else if(newStudent.input_unit == 'gallons' && newStudent.target_unit== 'cubic-feet') {
-    newStudent.auth_answer = (newStudent.input_value / 7.481);
+    newStudent.auth_answer = (parseFloat(newStudent.input_value) / 7.481);
   } 
   newStudent.auth_answer = roundTo(parseFloat(newStudent.auth_answer), 1);
 }
