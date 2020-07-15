@@ -1,15 +1,25 @@
 {
-  "name": "unit_conversion",
+  "name": "FlexionCodeReview",
   "version": "1.0.0",
-  "description": "",
+  "description": "```sh\r # Install NodeJS, NPM and Curl",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
     "dev": "nodemon index"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earlbingham/FlexionCodeReview.git"
+  },
   "keywords": [],
-  "author": "earl bingham",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
@@ -18,5 +28,9 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/earlbingham/FlexionCodeReview/issues"
+  },
+  "homepage": "https://github.com/earlbingham/FlexionCodeReview#readme"
 }
