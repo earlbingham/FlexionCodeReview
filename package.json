@@ -1,7 +1,7 @@
 {
   "name": "FlexionCodeReview",
   "version": "1.0.0",
-  "description": "```sh\r # Install NodeJS, NPM and Curl",
+  "description": "Unit Conversion tool for teachers",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -17,7 +17,7 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test",
     "start": "node index",
     "dev": "nodemon index"
   },
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/earlbingham/FlexionCodeReview/issues"
   },
-  "homepage": "https://github.com/earlbingham/FlexionCodeReview#readme"
+  "homepage": "https://github.com/earlbingham/FlexionCodeReview"
 }
