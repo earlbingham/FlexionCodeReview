@@ -6,8 +6,16 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.1",
+    "moment": "^2.24.0",
+    "temperature-util": "^1.0.5",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
@@ -20,15 +28,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.1",
-    "moment": "^2.24.0",
-    "uuid": "^3.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.10"
-  },
   "bugs": {
     "url": "https://github.com/earlbingham/FlexionCodeReview/issues"
   },

@@ -3,6 +3,7 @@ const uuid = require('uuid');
 const router = express.Router();
 const students = require('../../Students');
 const fs = require('fs');
+const convertTemp = require('temperature-util');
 
 const idFilter = req => student => student.id === parseInt(req.params.id);
 
@@ -89,31 +90,35 @@ function validateStudentResponse (newStudent) {
 
 // If teacher has not provided auth_answer, then generate
 function generateAuthAnswer(newStudent) {
-  if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) - 32) * 5 / 9;
-  } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = ((parseFloat(newStudent.input_value)-32)/1.8) + 273.15;
-  } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = parseFloat(newStudent.input_value) + 459.67;
-  } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 32;
-  } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = parseFloat(newStudent.input_value) + 273.15;
-  } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 491.67;
-  } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = parseFloat(newStudent.input_value) - 273.15;
-  } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = ((parseFloat(newStudent.input_value) - 273.15) * 1.8) + 32;
-  } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Rankine') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9/5);
-  } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Celsius') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) - 491.67) * 5/9;
-  } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Fahrenheit') {
-    newStudent.auth_answer = parseFloat(newStudent.input_value) - 459.67;
-  } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Kelvin') {
-    newStudent.auth_answer = (parseFloat(newStudent.input_value) * 5/9);
-  } 
+  if(temperatureUnits(newStudent)) {
+    newStudent.auth_answer = convertTemp.convertTemperature(
+      parseFloat(newStudent.input_value), newStudent.input_unit.toLowerCase(), newStudent.target_unit.toLowerCase());
+  }
+  // if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Celsius') {
+  //   newStudent.auth_answer = convertTemp.convertTemperature(parseFloat(newStudent.input_value), 'fahrenheit', 'celsius');
+  // } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Kelvin') {
+  //   newStudent.auth_answer = ((parseFloat(newStudent.input_value)-32)/1.8) + 273.15;
+  // } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Rankine') {
+  //   newStudent.auth_answer = parseFloat(newStudent.input_value) + 459.67;
+  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Fahrenheit') {
+  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 32;
+  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Kelvin') {
+  //   newStudent.auth_answer = parseFloat(newStudent.input_value) + 273.15;
+  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Rankine') {
+  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 491.67;
+  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Celsius') {
+  //   newStudent.auth_answer = parseFloat(newStudent.input_value) - 273.15;
+  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Fahrenheit') {
+  //   newStudent.auth_answer = ((parseFloat(newStudent.input_value) - 273.15) * 1.8) + 32;
+  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Rankine') {
+  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9/5);
+  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Celsius') {
+  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) - 491.67) * 5/9;
+  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Fahrenheit') {
+  //   newStudent.auth_answer = parseFloat(newStudent.input_value) - 459.67;
+  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Kelvin') {
+  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 5/9);
+  // } 
   
   else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'tablespoons') {
     newStudent.auth_answer = (parseFloat(newStudent.input_value) * 67.628);
@@ -188,6 +193,15 @@ function roundTo (n, digits) {
   var multiplicator = Math.pow(10, digits);
   n = parseFloat((n * multiplicator).toFixed(11));
   return (Math.round(n) / multiplicator).toFixed(1);
+}
+
+function temperatureUnits(newStudent) {
+  if (['Kelvin', 'Celsius', 'Fahrenheit', 'Rankine', 'liters', 'tablespoons', 
+    'cubic-inches', 'cups', 'cubic-feet', 'gallons'].indexOf(newStudent.input_unit) >= 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Check if inputUnit is actually in the list of expected units of measure
