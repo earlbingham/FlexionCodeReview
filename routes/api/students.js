@@ -94,31 +94,6 @@ function generateAuthAnswer(newStudent) {
     newStudent.auth_answer = convertTemp.convertTemperature(
       parseFloat(newStudent.input_value), newStudent.input_unit.toLowerCase(), newStudent.target_unit.toLowerCase());
   }
-  // if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Celsius') {
-  //   newStudent.auth_answer = convertTemp.convertTemperature(parseFloat(newStudent.input_value), 'fahrenheit', 'celsius');
-  // } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Kelvin') {
-  //   newStudent.auth_answer = ((parseFloat(newStudent.input_value)-32)/1.8) + 273.15;
-  // } else if(newStudent.input_unit == 'Fahrenheit' && newStudent.target_unit== 'Rankine') {
-  //   newStudent.auth_answer = parseFloat(newStudent.input_value) + 459.67;
-  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Fahrenheit') {
-  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 32;
-  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Kelvin') {
-  //   newStudent.auth_answer = parseFloat(newStudent.input_value) + 273.15;
-  // } else if(newStudent.input_unit == 'Celsius' && newStudent.target_unit== 'Rankine') {
-  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9 / 5) + 491.67;
-  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Celsius') {
-  //   newStudent.auth_answer = parseFloat(newStudent.input_value) - 273.15;
-  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Fahrenheit') {
-  //   newStudent.auth_answer = ((parseFloat(newStudent.input_value) - 273.15) * 1.8) + 32;
-  // } else if(newStudent.input_unit == 'Kelvin' && newStudent.target_unit== 'Rankine') {
-  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 9/5);
-  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Celsius') {
-  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) - 491.67) * 5/9;
-  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Fahrenheit') {
-  //   newStudent.auth_answer = parseFloat(newStudent.input_value) - 459.67;
-  // } else if(newStudent.input_unit == 'Rankine' && newStudent.target_unit== 'Kelvin') {
-  //   newStudent.auth_answer = (parseFloat(newStudent.input_value) * 5/9);
-  // } 
   
   else if(newStudent.input_unit == 'liters' && newStudent.target_unit== 'tablespoons') {
     newStudent.auth_answer = (parseFloat(newStudent.input_value) * 67.628);
