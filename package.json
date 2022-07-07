@@ -9,7 +9,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "temperature-util": "^1.0.5",
     "uuid": "^3.3.2"
   },
